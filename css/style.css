@@ -20,7 +20,7 @@ section {
 
 body {
   overflow-x: hidden;
-  min-width: 100%;
+  /* min-width: 100%; */
 }
 
 img {
@@ -42,7 +42,6 @@ ul {
 
 .container {
   width: 100%;
-  min-width: 122.5rem;
   margin: 0 auto;
   padding: 0 10rem;
 }
@@ -349,7 +348,8 @@ header {
 
 .img__2--style {
   border-radius: 50%;
-  height: 50rem;
+  height: auto;
+  width: 45rem;
 }
 
 .sub-title {
@@ -534,10 +534,10 @@ header {
 
 .menu {
   text-align: center;
-  width: 1440px;
-
+  width: 100%;
+  height: auto;
   padding: 5rem 0;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   position: relative;
 }
 
@@ -570,16 +570,15 @@ header {
 }
 
 .menu-grid {
-  padding: 4rem;
 }
 
 .grid {
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, 33.33333%);
+  grid-template-columns: repeat(4, 22%);
   grid-column-gap: 2.5rem;
   grid-row-gap: 4rem;
-  padding: 4rem;
+  justify-content: center;
+  width: 100%;
 }
 
 .grid-item {
@@ -632,6 +631,7 @@ header {
 
 .client {
   margin: 0 auto;
+  width: 100%;
   height: 729.37px;
   position: relative;
 }
@@ -645,7 +645,6 @@ header {
 
 .clients-card {
   height: 288px;
-  width: 392px;
   box-shadow: 2px 2px 20px 6px rgba(173, 173, 173, 0.25);
   border-radius: 10px;
   position: relative;
@@ -654,17 +653,17 @@ header {
 
 .clients-img {
   height: 61px;
-  width: 61px;
+  width: auto;
 }
 
 .img-c {
   height: 61px;
-  width: 61px;
+  width: auto;
   border-radius: 50%;
   border: 3px solid #d13e3c;
   position: absolute;
-  left: 16rem;
-  bottom: 26rem;
+  left: 41%;
+  top: -11%;
 }
 
 .client-text {
@@ -842,16 +841,16 @@ header {
 
 .blog-card {
   width: 100%;
-  margin: 0 12rem;
   display: grid;
   grid-template-columns: repeat(3, 28.333%);
   grid-column-gap: 5rem;
+  justify-content: center;
   position: relative;
 }
 
 .blog-items {
   height: 470px;
-  width: 380px;
+  /* width: 380px; */
   background: #ffffff;
   box-shadow: 2px 2px 10px 4px rgba(144, 144, 144, 0.25);
   border-radius: 10px;
@@ -861,11 +860,12 @@ header {
 .blog-img {
   position: relative;
   height: 256px;
-  width: 380px;
+  /* width: 380px; */
 }
 
 .img-style {
   border-radius: 10px;
+  height: 100%;
 }
 
 .overlay-blog {
