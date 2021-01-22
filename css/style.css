@@ -738,7 +738,6 @@ header {
 
 .rec-36 {
   position: absolute;
-  
   bottom: 7rem;
   left: 30rem;
   -webkit-animation: spin 5s linear infinite;
@@ -747,7 +746,6 @@ header {
 
 .rec-37 {
   position: absolute;
-  
   left: 28rem;
   bottom: 5rem;
   -webkit-animation: spin 5s linear infinite;
