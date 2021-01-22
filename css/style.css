@@ -133,7 +133,7 @@ ul {
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
-  padding: 0 35rem;
+
   color: #909090;
 }
 
@@ -325,7 +325,7 @@ header {
 /* About Our Restaurant */
 
 .about {
-  height: 682px;
+  height: 748px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -336,20 +336,30 @@ header {
 .flex-pera2 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-left: 17rem;
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+
+  margin-left: 14rem;
+  margin-top: 6rem;
+  /*
+  margin-bottom: 5rem; */
 }
 
 .img__2 {
   margin-right: 10rem;
+  width: 50%;
 }
 
 .img__2--style {
   border-radius: 50%;
   height: auto;
   width: 45rem;
+}
+
+.text-1 {
+  width: 50 %;
+  margin-top: 5%;
+  font-family: "Poppins", sans-serif;
 }
 
 .sub-title {
@@ -399,8 +409,8 @@ header {
 }
 .ellip-4 {
   position: absolute;
-  top: 45rem;
-  left: 21rem;
+  top: 46rem;
+  left: 19rem;
   -webkit-animation: spinXY 5s linear infinite;
   animation: spinXY 5s linear infinite;
 }
@@ -409,7 +419,7 @@ header {
 
 .service {
   width: 100%;
-  height: 510px;
+  height: auto;
 }
 
 .serv {
@@ -431,6 +441,9 @@ header {
   display: flex;
   flex-direction: row;
   margin-top: 15rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  justify-content: space-evenly;
 }
 
 .card {
@@ -438,7 +451,6 @@ header {
   flex-direction: column;
   width: 291px;
   height: 272px;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -574,11 +586,12 @@ header {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 22%);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 334px));
   grid-column-gap: 2.5rem;
   grid-row-gap: 4rem;
   justify-content: center;
   width: 100%;
+  grid-auto-rows: minmax(240px, auto);
 }
 
 .grid-item {
@@ -632,15 +645,16 @@ header {
 .client {
   margin: 0 auto;
   width: 100%;
-  height: 729.37px;
+  height: auto;
   position: relative;
 }
 
 .client-grid {
   display: grid;
-  grid-template-columns: repeat(3, 23.333%);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 40rem));
   justify-content: center;
   grid-column-gap: 5rem;
+  margin-bottom: 10rem;
 }
 
 .clients-card {
@@ -719,12 +733,11 @@ header {
 }
 
 .space-bedna {
+  width: max-content;
 }
 
 .rec-36 {
   position: absolute;
-  width: 33.77px;
-  height: 32.42px;
   bottom: 7rem;
   left: 30rem;
   -webkit-animation: spin 5s linear infinite;
@@ -733,8 +746,6 @@ header {
 
 .rec-37 {
   position: absolute;
-  width: 16.18px;
-  height: 15.53px;
   left: 28rem;
   bottom: 5rem;
   -webkit-animation: spin 5s linear infinite;
@@ -744,16 +755,17 @@ header {
 /* Team style */
 .team {
   margin: 0 auto;
-  height: 729.37px;
+  height: auto;
   position: relative;
 }
 
 .img-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 21.333%);
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   justify-content: center;
   grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
 .team-img {
@@ -836,16 +848,18 @@ header {
 /* blog style  */
 .blog {
   margin: 0 auto;
-  height: 807px;
+  height: auto;
 }
 
 .blog-card {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 28.333%);
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   grid-column-gap: 5rem;
   justify-content: center;
   position: relative;
+  grid-row-gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .blog-items {
@@ -960,7 +974,7 @@ header {
 /* Footer style */
 footer {
   width: 100%;
-  height: 607px;
+  height: auto;
 }
 
 .footer-items {
@@ -970,11 +984,12 @@ footer {
 .footer-grid {
   width: 100%;
   height: 100%;
-  /* margin: 0 12rem; */
+  /*! margin: 0 auto; */
   display: grid;
-  grid-template-columns: repeat(4, 19.333%);
+  grid-template-columns: repeat(auto-fill, minmax(292px, 215px));
   grid-column-gap: 5rem;
   position: relative;
+  /*! justify-content: center; */
 }
 
 .fo-logo {
@@ -1053,4 +1068,126 @@ footer {
 
 .twi {
   margin: 1rem;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 1000px) {
+  /* Header Nav style for tab*/
+
+  .nav-item {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 1rem;
+  }
+
+  /* button style and hover  */
+  .btn-con {
+    background-color: transparent;
+    color: #d13e3c;
+    border: 1px solid #d13e3c;
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase; /* button width expend when we hover */
+  }
+
+  .btn-con:hover {
+    background-color: #d13e3c;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  /* Book table style  */
+
+  .flex-pera {
+    margin-bottom: 8rem;
+  }
+
+  .title-b {
+    font-size: 4rem;
+  }
+
+  .title-b .res {
+    font-size: 6rem;
+  }
+
+  .img-1 {
+    width: 50%;
+  }
+
+  .img-1 img {
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .header1-img {
+    margin-top: 9rem;
+  }
+
+  .text {
+    width: 50%;
+    padding: 0;
+    margin-right: 2rem;
+  }
+
+  .space-filler {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .rec-2 {
+    top: 50rem;
+    right: 2rem;
+  }
+
+  .ellip-1 {
+    top: 60rem;
+    right: 21rem;
+  }
+
+  .ellip-2 {
+    top: 65rem;
+  }
+
+  /* About Our Restaurant */
+
+  .about {
+    height: 764px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9;
+    position: relative;
+  }
+
+  .flex-pera2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  .img__2 {
+    margin-right: 10rem;
+  }
+
+  .img__2--style {
+    width: 30rem;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .rec-6 {
+    top: 11rem;
+    left: 17rem;
+  }
+  .ellip-4 {
+    top: 45rem;
+    left: 4rem;
+  }
 }
