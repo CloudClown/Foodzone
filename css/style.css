@@ -740,6 +740,7 @@ header {
   position: absolute;
   bottom: 7rem;
   left: 30rem;
+  width: auto;
   -webkit-animation: spin 5s linear infinite;
   animation: spin 5s linear infinite;
 }
@@ -748,6 +749,7 @@ header {
   position: absolute;
   left: 28rem;
   bottom: 5rem;
+  width: auto;
   -webkit-animation: spin 5s linear infinite;
   animation: spin 5s linear infinite;
 }
