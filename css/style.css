@@ -467,7 +467,8 @@ header {
 .circle--1 {
   position: absolute;
   top: 49px;
-  left: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 48px;
   height: 48px;
 }
@@ -475,7 +476,8 @@ header {
 .drink {
   position: absolute;
   top: 4.7rem;
-  left: 11rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 50px;
 }
@@ -483,7 +485,8 @@ header {
 .circle--2 {
   position: absolute;
   top: 49px;
-  left: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 48px;
   height: 48px;
 }
@@ -491,7 +494,8 @@ header {
 .meat {
   position: absolute;
   top: 3.8rem;
-  left: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 58px;
   height: 58px;
 }
@@ -499,7 +503,8 @@ header {
 .circle--3 {
   position: absolute;
   top: 49px;
-  left: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 48px;
   height: 48px;
 }
@@ -507,7 +512,8 @@ header {
 .ice-cream {
   position: absolute;
   top: 3.8rem;
-  left: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 70px;
   height: 66px;
 }
@@ -1072,124 +1078,261 @@ footer {
   margin: 1rem;
 }
 
+/* Unique motion effects */
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.title-b,
+.title,
+.hoo-title {
+  animation: fadeUp 0.9s ease both;
+}
+
+.card,
+.grid-item,
+.clients-card,
+.blog-items,
+.team-img {
+  animation: fadeUp 0.8s ease both;
+}
+
+.card:nth-child(2),
+.grid-item:nth-child(2n),
+.clients-card:nth-child(2),
+.blog-items:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.card:nth-child(3),
+.clients-card:nth-child(3),
+.blog-items:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.img-1,
+.img__2,
+.tri {
+  animation: floatY 5s ease-in-out infinite;
+}
+
 /* Responsive design */
 
-@media only screen and (max-width: 1000px) {
-  /* Header Nav style for tab*/
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 6rem;
+  }
+
+  .text {
+    padding-right: 6rem;
+  }
+
+  .title-b {
+    font-size: 5.8rem;
+  }
+
+  .title-b .res {
+    font-size: 8rem;
+  }
+
+  .title {
+    font-size: 4.8rem;
+  }
+
+  .rec-2,
+  .ellip-1,
+  .ellip-2,
+  .rec-6,
+  .ellip-4,
+  .rec-20,
+  .rec-36,
+  .rec-37,
+  .ellip-12 {
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+  }
 
   .nav-item {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0 1rem;
+    margin: 0;
   }
 
-  /* button style and hover  */
-  .btn-con {
-    background-color: transparent;
-    color: #d13e3c;
-    border: 1px solid #d13e3c;
-    border-radius: 10px;
-    padding: 0.5rem 1.5rem;
-    text-transform: uppercase; /* button width expend when we hover */
+  .flex-pera,
+  .flex-pera2 {
+    flex-direction: column;
+    gap: 3rem;
+    margin: 4rem 0 8rem;
   }
 
-  .btn-con:hover {
-    background-color: #d13e3c;
-    color: #fff;
-    font-weight: bold;
+  .text,
+  .img-1,
+  .img__2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
 
-  /* Book table style  */
+  .sub-title,
+  .serv,
+  .sub-menu {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  .flex-pera {
-    margin-bottom: 8rem;
+  .about {
+    height: auto;
+    padding: 7rem 0;
+  }
+
+  .img__2--style {
+    width: min(42rem, 100%);
+  }
+
+  .paragraph-4,
+  .client-p {
+    padding: 0 1rem;
+  }
+
+  .blog-text {
+    width: auto;
+    padding: 0 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    row-gap: 2rem;
+  }
+
+  .fo-logo,
+  .ul-items {
+    margin-top: 4rem;
+  }
+
+  .space-filler,
+  .space-bedna {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  header {
+    padding: 2.5rem 0;
   }
 
   .title-b {
     font-size: 4rem;
+    line-height: 1.3;
   }
 
   .title-b .res {
-    font-size: 6rem;
-  }
-
-  .img-1 {
-    width: 50%;
-  }
-
-  .img-1 img {
-    border-top-right-radius: 5%;
-    border-bottom-left-radius: 10%;
-  }
-
-  .header1-img {
-    margin-top: 9rem;
-  }
-
-  .text {
-    width: 50%;
-    padding: 0;
-    margin-right: 2rem;
-  }
-
-  .space-filler {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-
-  .rec-2 {
-    top: 50rem;
-    right: 2rem;
-  }
-
-  .ellip-1 {
-    top: 60rem;
-    right: 21rem;
-  }
-
-  .ellip-2 {
-    top: 65rem;
-  }
-
-  /* About Our Restaurant */
-
-  .about {
-    height: 764px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #f9f9f9;
-    position: relative;
-  }
-
-  .flex-pera2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 0;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-
-  .img__2 {
-    margin-right: 10rem;
-  }
-
-  .img__2--style {
-    width: 30rem;
+    font-size: 5.2rem;
   }
 
   .title {
-    font-size: 44px;
+    font-size: 3.6rem;
+    margin: 1.5rem 0;
   }
 
-  .rec-6 {
-    top: 11rem;
-    left: 17rem;
+  .btn,
+  .btn-1 {
+    width: 100%;
+    max-width: 30rem;
   }
-  .ellip-4 {
-    top: 45rem;
-    left: 4rem;
+
+  .card,
+  .clients-card,
+  .blog-items {
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .img-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 9px;
+  }
+
+  .title-b {
+    font-size: 3.2rem;
+  }
+
+  .title-b .res {
+    font-size: 4.2rem;
+  }
+
+  .paragraph {
+    line-height: 1.8;
+  }
+
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .p-style::after {
+    width: 120px;
+    right: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
